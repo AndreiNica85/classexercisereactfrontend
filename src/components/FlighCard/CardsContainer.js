@@ -3,19 +3,28 @@ import NavBar from "../Home/NavBar";
 import Card from "./Card";
 import "./CardsContainer.css";
 
-function CardsContainer(flights){
+function CardsContainer() {
+
+    const [searchParams, setSearchParams] = useSearchParams();
+    searchParams.get("__firebase_request_key")
 
     return (
-    <div>
-        <div className="cardsContainer">
-            <NavBar/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-        </div>
-    </div>)
-      
+        <div>
+            <NavBar />
+            <div className="cardsContainer">
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+            </div>
+        </div>)
+
 
 }
 

@@ -1,0 +1,7 @@
+.flight-card{
+    padding: 30px;
+    min-width: 20%;
+    border: 1px solid black;
+    margin: 30px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
