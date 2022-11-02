@@ -4,6 +4,7 @@ import "./App.css";
 import Home from "./components/Home/Home"
 import Flights from "./components/Flights/Flights";
 import TravellerForm from "./components/Traveller/TravellerForm";
+import CardsContainer from "./components/FlighCard/CardsContainer";
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="/flights" element={<Flights />} />
           <Route path="/travellers" element={<TravellerForm />} />
+          <Route path="/bookFlight" element={<CardsContainer />} />
       </Routes>
   );
 }

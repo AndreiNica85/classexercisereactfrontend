@@ -1,56 +1,69 @@
-.destination{
-    width: 50%;
-    font-size: 20px;
-    padding: 10px;
-    text-align: center;
-    background-color: rgba(240, 248, 255, 0);
-    border: 0px;
-    border-bottom: 2px solid black;
+.destination {
+  width: 100%;
+  font-size: 20px;
+  padding: 10px;
+  text-align: center;
+  background-color: rgba(240, 248, 255, 0);
+  border: 0px;
+  border-bottom: 2px solid black;
 }
 
-
-
-input{
-    width: 15%;
-    font-size: 20px;
+table {
+  width: 70%;
+  margin-left: 15%;
 }
 
-span{
-    color: white;
-    margin: 10px;
-    font-size: 25px;
+table td {
+  padding: 20px;
+  width: 30%;
 }
+
+.fecha {
+  margin-left: 10%;
+  width: 80%;
+  border: 0px;
+  font-size: 22px;
+}
+
+input {
+  width: 15%;
+  font-size: 20px;
+}
+
+span {
+  color: black;
+  margin: 10px;
+  font-size: 25px;
+}
+
 .sendInfo {
-    min-width: 160px;
-    height: 50px;
-    color: #fff;
-    padding: 5px 10px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-    display: inline-block;
-    outline: none;
-    border-radius: 5px;
-    border: none;
-    background-size: 120% auto;
-    background-image: linear-gradient(315deg, #000428 0%, #004e92 75%);
-    margin-left: 5%;
+  min-width: 50%;
+  height: 50px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  background-size: 120% auto;
+  background-image: linear-gradient(315deg, #000428 0%, #004e92 75%);
+  margin-left: 25%;
 }
-  .sendInfo:hover {
-    background-position: right center;
-  }
-  .sendInfo:active {
-    top: 2px;
-  }
 
-  form{
-    width: 100%;
-  }
+.sendInfo:hover {
+  background-position: right center;
+}
 
+.sendInfo:active {
+  top: 2px;
+}
 
-.selectionDestination{
-    width: 100%;
-    margin: 0 auto;
-    padding: 200px;
+form {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 10%;
 }
