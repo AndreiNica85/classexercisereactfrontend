@@ -60,6 +60,11 @@ body{
     top: 2px;
   }
 
+  a{
+    text-decoration: none;
+    color: white;
+  }
+
 .info-button{
     width: 15%;
     min-height: 40px;

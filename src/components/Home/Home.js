@@ -15,8 +15,8 @@ function Home() {
               begins with a single step
             </strong>
           </h1>
-          <a href="/flights" className="search-button">Search Flights</a>
-          <a href="#" className="search-button">Get Info</a>
+          <button className="search-button"><a href="/flights">Search Flights</a></button>
+          <button className="search-button"><a href="/Info">Get Info</a></button>
         </div>
         <div className="image"></div>
       </div>

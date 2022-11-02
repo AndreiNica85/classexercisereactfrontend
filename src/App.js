@@ -2,6 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./components/Home/Home"
+import Flights from "./components/Flights/Flights";
 
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
 
       <Routes>
           <Route index element={<Home />} />
-          {/* <Route path="/flights" element={<Flights />} /> */}
+          <Route path="/flights" element={<Flights />} />
       </Routes>
 
   );

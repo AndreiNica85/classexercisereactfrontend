@@ -4,11 +4,11 @@ import "./navBar.css"
 function NavBar() {
   return (
     <div class="topnav">
-      <a class="active" href="#home">
+      <a class="active" href="/">
         Home</a>
-      <a href="#news">News</a>
-      <a href="#contact">Contact</a>
-      <a href="#about">About</a>
+      <a href="/flights">Flights</a>
+      <a href="/">Contact</a>
+      <a href="/">About</a>
     </div>
   );
 }
