@@ -6,7 +6,6 @@ import FlightCard from "../FlighCard/FlightCard";
 import Options from "./Options";
 
 function SearchBar() {
-
   const [origin, setOrigin] = useState();
 
   const originHandler = (e) => {
@@ -15,10 +14,7 @@ function SearchBar() {
     console.log(GetDestinations());
   };
 
-
-
-  function GetDestinations(){
-
+  function GetDestinations() {
     let urlflights = "http://localhost:8080/flights/cities/from/" + origin;
 
     const [flights, setPosts] = useState([]);
@@ -34,10 +30,8 @@ function SearchBar() {
       }
       fetchData();
     }, []);
-    return <div>{flights}</div>
-
+    return <div>{flights}</div>;
   }
-
 
   let url = "http://localhost:8080/flights";
 
@@ -69,10 +63,14 @@ function SearchBar() {
               return <Options props={o} />;
             })}
           </select>
-          <input className="sendInfo" value="Book a flight!" type="submit" onClick={originHandler}></input>
-        </form> 
-      </div> 
-
+          <input
+            className="sendInfo"
+            value="Book a flight!"
+            type="submit"
+            onClick={originHandler}
+          ></input>
+        </form>
+      </div>
     </div>
   );
 }

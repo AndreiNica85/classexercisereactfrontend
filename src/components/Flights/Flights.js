@@ -1,19 +1,18 @@
 import React from "react";
 import SearchBar from "../SearchBar/SearchBar";
-import "./../SearchBar/SearchBar.css"
+import "./../SearchBar/SearchBar.css";
 import NavBar from "../Home/NavBar";
-import "./../Home/navBar.css"
+import "./../Home/navBar.css";
 import "./../Home/Home.css";
+import PeterBookFlights from "../PeterBookFlights";
 
-function Flights(){
-
-    return (
+function Flights() {
+  return (
     <div>
-        <NavBar />
-        <SearchBar />
+      <NavBar />
+      <PeterBookFlights />
     </div>
-    );
-
+  );
 }
 
 export default Flights;
