@@ -3,14 +3,7 @@ import React from "react";
 function SearchBar() {
   const [origin, setOrigin] = useState();
 
-  const originHandler = (e) => {
-    e.preventDefault();
-    setOrigin(document.querySelector(".destination").value);
-    console.log(GetDestinations());
-  };
 
-  function GetDestinations() {
-    let urlflights = "http://localhost:8080/flights/cities/from/" + origin;
 
     const [flights, setPosts] = useState([]);
 
