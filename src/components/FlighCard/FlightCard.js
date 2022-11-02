@@ -1,22 +1,40 @@
 import React from "react";
-import "./FlightCard.css"
+import "./FlightCard.css";
+import { useState, useEffect } from "react";
+import axios from "axios";
+import Card from "./Card";
 
-function FlightCard(flight){
+function FlightCard(origin) {
+  console.log("FlightCard" + origin.origin);
+  let urlflights = "http://localhost:8080/flights/cities/from/" + origin.origin;
 
-    return (
-        <div className="flight-card">
-            <h2>Company</h2>
-            <div>
-                <p>Origin</p>
-                <p>Destination</p>
-                <p>DepartureDate</p>
-                <p>DepartureTime</p>
-                <a className="selected-button"></a> 
-            </div>
-        </div>
-    );
+  const ShowFlights = () => {
+    const [flights, setPosts] = useState([]);
 
+    useEffect(() => {
+      async function fetchData() {
+        try {
+          const res = await axios.get(urlflights);
+          setPosts(res.data);
+        } catch (err) {
+          console.log(err);
+        }
+      }
+      fetchData();
+    }, []);
+    return <div>{flights}</div>;
+  };
 
+  const flights = ShowFlights();
+
+  return (
+    <div>
+      {flights.props.children.map((o) => {
+        console.log(o)
+        return <Card props={o} />;
+      })}
+    </div>
+  );
 }
 
 export default FlightCard;
