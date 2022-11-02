@@ -1,9 +1,4 @@
 import React from "react";
-import axios from "axios";
-import { useState, useEffect } from "react";
-import "./SearchBar.css";
-import FlightCard from "../FlighCard/FlightCard";
-import Options from "./Options";
 
 function SearchBar() {
   const [origin, setOrigin] = useState();
