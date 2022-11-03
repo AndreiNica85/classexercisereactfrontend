@@ -3,14 +3,13 @@ form {
 }
 
 form h1 {
-  color: aliceblue;
+  color: #004e92;
   text-align: center;
-  background-image: linear-gradient(315deg, #000428 0%, #004e92 75%);
 }
 
 .grid-container {
     display: grid;
-    grid-auto-rows: 60px 1fr;
+    grid-auto-rows: 40px 1fr;
     grid-gap: 20px;
     width: 100vw;
     height: 100vh;
@@ -32,7 +31,6 @@ form h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100vw;
   }
 
   .form-wrapper .footer {
@@ -57,7 +55,7 @@ form h1 {
 
 
 
-  .form {
+  .formA {
     width: 60vw;
     height: 60vh;
     background-color: #fff;
@@ -66,7 +64,7 @@ form h1 {
 
   }
 
-  input {
+  .inputA {
     font-size: 16px;
     font-size: max(16px, 1em);
     font-family: inherit;

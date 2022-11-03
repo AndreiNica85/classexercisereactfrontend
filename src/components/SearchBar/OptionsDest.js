@@ -3,7 +3,7 @@ import React from "react";
 
 function OptionsDest(props){
     
-    console.log(props)
+    console.log(props.props)
     
     return(
         

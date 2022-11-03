@@ -5,6 +5,8 @@ import axios from "axios";
 import OptionsDest from "./OptionsDest";
 import DestSelection from "./DestSelection"
 
+
+
 function SearchBar() {
 
 // Origin Handler

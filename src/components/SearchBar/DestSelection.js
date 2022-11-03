@@ -9,13 +9,32 @@ function DestSelection(data){
     console.log("ORIGIN IN DEST: " + data.data)
 
     const [destination, setDestination] = useState([]);
+    const [origen, setOrigin] = useState([]);
 
 
     let urlDestination = "http://localhost:8080/flights/"+ data.data +"/destinations";
-    console.log(urlDestination);
 
- 
-    fetch(urlDestination).then( (response) =>{return response.json()}).then( (q) => {  q.map((element)=>{destination.push(element)})  } )
+
+
+    
+    
+    
+    
+
+    const api = async () => {
+      
+      let res = await fetch(urlDestination);
+      
+      let data = await res.json();
+      
+      console.log(data)
+      
+      setDestination(data)
+      
+    };
+    api();
+    
+  console.log(destination);
     
 
 
