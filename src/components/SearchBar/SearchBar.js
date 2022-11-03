@@ -3,32 +3,19 @@ import Options from "./Options";
 import { useEffect } from "react";
 import axios from "axios";
 import OptionsDest from "./OptionsDest";
+import DestSelection from "./DestSelection"
 
 function SearchBar() {
 
 // Origin Handler
 
   const [origin, setOrigin] = useState();
-
-// Destination Handler
-
-  const [destination, setDestination] = useState([]);
-
-  let urlDestination = "http://localhost:8080/flights/"+ origin +"/destinations";
-  console.log(urlDestination)
-
+  
   // Origin Handler
 
   const originHandler = (e) => {
     setOrigin(e.target.value);
-
-    const asd = async () => {
-      const dataF = await axios(urlDestination);
-      console.log(dataF.data)
-      setDestination(dataF.data)
-    }
-    asd();
-    console.log(destination);
+    console.log("ORIGIN: " + origin)
   }
 
 
@@ -78,23 +65,13 @@ function SearchBar() {
           <tr>
             <td><span>Origin:</span></td>
             <td>
-              <select className="origin" id="origin" defaultValue={"Seville"} onClick={originHandler}>
+              <select className="origin" id="origin" onChange={originHandler}>
                 {/* Hacer Onchange y poner origin */}
                 {dataArray.map((o) => {return <Options props={o} />;})}
               </select>
             </td>
           </tr>
-          <tr>
-            <td><span>Destination:</span></td>
-            <td>  
-              <select className="destination" id="dest">
-                {/* Tiene que hacer lo mismo que el de arriba 
-                A unas malas: pongo input text*/}
-                {destination.map((o) => {return <OptionsDest props={o} />;})}
-                  
-              </select>
-            </td>
-          </tr>
+          <DestSelection data={origin}/>
           <tr>
             <td><span>Departure date:</span></td>
             {/* Crear funcion handler para la fecha */}
