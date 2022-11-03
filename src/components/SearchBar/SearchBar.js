@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Options from "./Options";
 import { useEffect } from "react";
 import axios from "axios";
+import OptionsDest from "./OptionsDest";
 
 function SearchBar() {
 
@@ -13,45 +14,27 @@ function SearchBar() {
   const originHandler = (e) => {
 
     setOrigin(e.target.value);
-    console.log(origin)
-    e.preventDefault();
+
+    let urlDestination = "http://localhost:8080/flights/cities/from/" + origin;
+
+    fetch(urlDestination).then((response) =>{
+      return response.json()
+    }).then((destinations) => {
+
+      for(let i = 0; i < destinations.length; i++){
+        setDestination( arr => [...arr, `${destinations[i].destination}`]);
+      }
+      console.log(destination)
+
+    })
+      e.preventDefault();
   }
 
 // Destination Handler
 
 
-  const [destination, setDestination] = useState();
+  const [destination, setDestination] = useState([]);
 
-  const destinationHandler = (e) => {
-
-    setDestination(e.target.value);
-    console.log(destination)
-    e.preventDefault();
-  }
-
-// Fetching Destinations
-
-  let urlflights = "http://localhost:8080/flights/cities/from/" + origin;
-
-  const ShowFlights = () => {
-    const [flights, setFlights] = useState([]);
-
-    useEffect(() => {
-      async function fetchData() {
-        try {
-          const res = await axios.get(urlflights);
-          setFlights(res.data);
-        } catch (err) {
-          console.log(err);
-        }
-      }
-      fetchData();
-    }, []);
-    return <div>{flights}</div>;
-  }
-
-  const dataDest = ShowFlights();
-  console.log(dataDest)
 
 // Fetching Origins
 
@@ -76,6 +59,12 @@ function SearchBar() {
 
   const data = ShowPosts();
 
+  // Destination handler:
+
+
+
+  // Submit handler
+
   function submitHandler(e){
     e.preventDefault();
     let fecha = document.querySelector(".fecha").value;
@@ -91,7 +80,7 @@ function SearchBar() {
           <tr>
             <td><span>Origin:</span></td>
             <td>
-              <select className="destination" id="origin" onChange={originHandler}>
+              <select className="origin" id="origin" onChange={originHandler}>
                 {/* Hacer Onchange y poner origin */}
                 {data.props.children.map((o) => {return <Options props={o} />;})}
               </select>
@@ -100,10 +89,10 @@ function SearchBar() {
           <tr>
             <td><span>Destination:</span></td>
             <td>  
-              <select className="destination" id="dest" onChange={destinationHandler}>
+              <select className="destination" id="dest">
                 {/* Tiene que hacer lo mismo que el de arriba 
                 A unas malas: pongo input text*/}
-                  {data.props.children.map((o) => {return <Options props={o} />;})}
+                  {destination.map((o) => { return <OptionsDest data={o} />})}
               </select>
             </td>
           </tr>
