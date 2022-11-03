@@ -6,15 +6,10 @@ html, * {
   font-size: 16px;
 }
 
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Roboto', sans-serif;
-}
+
 
 .flight-card{
-  width:805px;
+  width:600px;
   height: 610px;
   margin: 50px auto;
   border-radius: 50px;
@@ -24,12 +19,13 @@ box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
   .flight-card-header{
     height: 250px;
     width: 100%;
-    background: linear-gradient(to bottom, #264b76 0%,#002c5f 100%);
+    background: #32255e;
     padding: 30px 50px;
     border-bottom: 7px solid #6DBE47;
     position: relative;
   }
     .flight-logo{
+
       height: 110px;
       width:100%;
     }
@@ -152,8 +148,9 @@ color: white;      }
 }
 
 .selected-button {
+    margin-left: 20%;
     min-width: 60%;
-    height: 30px;
+    height: 40px;
     color: #fff;
     padding: 10px;
     font-weight: bold;
@@ -162,7 +159,7 @@ color: white;      }
     text-align: center;
     display: inline-block;
     outline: none;
-    border-radius: 5px;
+    border-radius: 10px;
     border: none;
     background-size: 120% auto;
     background-image: linear-gradient(315deg, #000428 0%, #004e92 75%);

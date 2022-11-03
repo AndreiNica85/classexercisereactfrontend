@@ -2,8 +2,9 @@ import React from "react";
 
 
 function Options(props){
+    // console.log(props)
     return(
-        <option value={props.props.origin}>{props.props.origin}</option>
+        <option value={props.props}>{props.props}</option>
     )
 
 

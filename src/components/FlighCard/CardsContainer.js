@@ -32,6 +32,8 @@ function CardsContainer() {
     setDataFlights(dataF.data)
   }, []);
 
+
+
   return (
     <div>
       <NavBar />

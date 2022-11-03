@@ -7,7 +7,7 @@ function OptionsDest(props){
     
     return(
         
-        <option value={props.data}>{props.data}</option>
+        <option value={props.props}>{props.props}</option>
     )
 
 

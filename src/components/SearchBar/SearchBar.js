@@ -9,36 +9,34 @@ function SearchBar() {
 // Origin Handler
 
   const [origin, setOrigin] = useState();
-  
-
-  const originHandler = (e) => {
-
-    setOrigin(e.target.value);
-
-    let urlDestination = "http://localhost:8080/flights/cities/from/" + origin;
-
-    fetch(urlDestination).then((response) =>{
-      return response.json()
-    }).then((destinations) => {
-
-      for(let i = 0; i < destinations.length; i++){
-        setDestination( arr => [...arr, `${destinations[i].destination}`]);
-      }
-      console.log(destination)
-
-    })
-      e.preventDefault();
-  }
 
 // Destination Handler
 
-
   const [destination, setDestination] = useState([]);
+
+  let urlDestination = "http://localhost:8080/flights/"+ origin +"/destinations";
+  console.log(urlDestination)
+
+  // Origin Handler
+
+  const originHandler = (e) => {
+    setOrigin(e.target.value);
+
+    const asd = async () => {
+      const dataF = await axios(urlDestination);
+      console.log(dataF.data)
+      setDestination(dataF.data)
+    }
+    asd();
+    console.log(destination);
+  }
+
+
 
 
 // Fetching Origins
 
-  let url = "http://localhost:8080/flights";
+  let url = "http://localhost:8080/flights/departureOrigins";
 
   const ShowPosts = () => {
     const [posts, setPosts] = useState([]);
@@ -53,15 +51,15 @@ function SearchBar() {
         }
       }
       fetchData();
+      
     }, []);
     return <div>{posts}</div>;
   };
 
   const data = ShowPosts();
+  const dataArray = data.props.children;
 
   // Destination handler:
-
-
 
   // Submit handler
 
@@ -80,9 +78,9 @@ function SearchBar() {
           <tr>
             <td><span>Origin:</span></td>
             <td>
-              <select className="origin" id="origin" onChange={originHandler}>
+              <select className="origin" id="origin" defaultValue={"Seville"} onClick={originHandler}>
                 {/* Hacer Onchange y poner origin */}
-                {data.props.children.map((o) => {return <Options props={o} />;})}
+                {dataArray.map((o) => {return <Options props={o} />;})}
               </select>
             </td>
           </tr>
@@ -92,7 +90,8 @@ function SearchBar() {
               <select className="destination" id="dest">
                 {/* Tiene que hacer lo mismo que el de arriba 
                 A unas malas: pongo input text*/}
-                  {destination.map((o) => { return <OptionsDest data={o} />})}
+                {destination.map((o) => {return <OptionsDest props={o} />;})}
+                  
               </select>
             </td>
           </tr>

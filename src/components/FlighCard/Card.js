@@ -1,10 +1,16 @@
+import { click } from "@testing-library/user-event/dist/click";
 import React from "react";
 import "./card.css"
 
 
 function Card(flight){
 
-    console.log(flight.flight)
+
+   const clickHandler = () =>{
+        window.location.href = `/travellers?id=${flight.flight.id}`;
+    }
+
+    console.log(flight.flight) 
 
     return (
         <div class="flight-card">
@@ -55,6 +61,7 @@ function Card(flight){
         <span class="detail">{flight.flight.price}</span>
       </div>
     </div>
+    <a className="selected-button" onClick={clickHandler}>BOOK A FLIGHT</a>
   </div>
 </div>
     )

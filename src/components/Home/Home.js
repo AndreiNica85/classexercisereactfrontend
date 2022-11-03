@@ -9,7 +9,7 @@ function Home() {
 
       <div className="Container">
         <div className="titlecontainer">
-          <h1 className="title">
+          <h1 className="titleHome">
             <strong>
               The <strong className="journey">journey</strong> of thousand miles
               begins with a single step
