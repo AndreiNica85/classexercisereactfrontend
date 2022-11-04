@@ -21,6 +21,8 @@ export default function Analytics(){
     console.log(analytics);
 
 
+
+
     // 
 
 return (
@@ -38,6 +40,24 @@ return (
             <th>Paid Flights</th>
             <th>All pages visits</th>
         </tr>
+        
+        
+        
+
+<tr>
+
+  <td>{analytics.countAllPagesVisitsTraveller}</td>
+
+  <td>{analytics.countDestinationsSelected}</td>
+
+  <td>{analytics.countHomePageVisits}</td>
+
+  <td>{analytics.countOriginSelected}</td>
+  <td>{analytics.countPaidFlights}</td>
+  <td>{analytics.countUnfinishedNotPaidFlights}</td>
+
+</tr>
+
 
 
         {/* New component tr for each analytics */}

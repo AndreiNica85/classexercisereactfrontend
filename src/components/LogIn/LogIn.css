@@ -1,0 +1,32 @@
+.loginContainer{
+    display: grid;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+.loginForm{
+
+    width: 80%;
+}
+
+.loginForm input{
+    margin-top: 10px;
+    border: 0px;
+    border-bottom: 2px solid black;
+    width: 200px;
+}
+
+.loginForm label{
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.loginButton{
+    margin-top: 20px;
+    border: 2px solid black;
+    background-color: white;
+    font-size: 20px;
+    text-align: center;
+    width: 100px;
+    height: 40px;
+}

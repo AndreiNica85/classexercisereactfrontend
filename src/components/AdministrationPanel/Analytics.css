@@ -1,18 +1,28 @@
 .analyticsContainer{
-    display: flex;
+    display: grid;
     justify-content: center;
 }
 
 
 .Atable{
     width: 80%;
+    border-collapse: collapse;
+    font-size: 25px;
+    text-align: center;
 
 }
 
 .Atable td{
+    font-size: 25px;
+    width: 100px;
+    border: 2px solid black;
 
 }
 
 .Atable tr{
-    
+    border: 2px solid black;
+}
+.Atable th{
+    padding: 20px;
+    border: 2px solid black;
 }

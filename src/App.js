@@ -9,7 +9,9 @@ import Payment from "./components/Payment/Payment";
 import Done from "./components/Done/Done";
 import NewFlight from "./components/AdministrationPanel/NewFlight";
 import Analytics from "./components/AdministrationPanel/Analytics";
-
+import AdministrationPanel from "./components/AdministrationPanel/AdministrationPanel";
+import NavBarAdministration from "./components/AdministrationPanel/NavBarAdministration";
+import LogIn from "./components/LogIn/LogIn";
 
 function App() {
   return (
@@ -23,7 +25,8 @@ function App() {
           <Route path="/done" element={<Done />} />
           <Route path="/newflight" element={<NewFlight />} />
           <Route path="/analytics" element={<Analytics />} />
-          {/* <Route path="/login" element={<LogIn />} /> */}
+          <Route path="/login" element={<LogIn />} />
+          <Route path="/admin" element={<AdministrationPanel />} />
       </Routes>
   );
 }
