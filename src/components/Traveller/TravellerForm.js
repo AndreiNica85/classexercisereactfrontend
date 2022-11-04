@@ -11,7 +11,7 @@ function TravellerForm(flight){
             <div className="form-wrapper">
                 <form action="" className="formA">
                     <div className="header">
-                        <h1>Traveller data.</h1>
+                        <h1>Traveller data</h1>
                     </div>
                     <div className="body">
                         <label className="labelTraveller" for="fname">First name:</label>
@@ -21,10 +21,10 @@ function TravellerForm(flight){
                         <input type="text" id="lname" name="lname" className="inputA"></input>
 
                         <label className="labelTraveller" for="email">Email:</label>
-                        <input type="text" className="inputA" id="email" name="email"></input>
+                        <input type="email" className="inputA" id="email" name="nie"></input>
 
-                        <label className="labelTraveller" for="pass">Password:</label>
-                        <input type="password" className="inputA" id="pass" name="pass"></input>
+                        <label className="labelTraveller" for="nie">NIE:</label>
+                        <input type="text" className="inputA" id="nie" name="nie"></input>
 
                         <label className="labelTraveller" for="nation">Nationality:</label>
                         <input type="text" className="inputA" id="nation" name="nation"></input>
@@ -34,8 +34,8 @@ function TravellerForm(flight){
 
                     </div>
                     <div className="footer">
-                        <input type="submit" className="inputA" value="Submit" className="button"></input>
-                        <input type="submit" className="inputA" value="Cancel" className="button"></input>
+                        <a  className="button" href="/payment">Submit</a>
+                        <a  id="button2" href="/" className="button">Cancel</a>
                     </div>
                 </form>
             </div>
