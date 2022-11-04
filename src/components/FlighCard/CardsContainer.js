@@ -17,7 +17,12 @@ function CardsContainer() {
 
   // Creating the URL:
 
-  const url = `http://localhost:8080/flights/cities/${origin}/${destination}/${date}`;
+  let url = "";
+  if(date != ''){
+    url = `http://localhost:8080/flights/cities/${origin}/${destination}/${date}`;
+  }else{
+    url = `http://localhost:8080/flights/cities/${origin}/${destination}`;
+  }
 
   // Call api with origin/destination/date:
 

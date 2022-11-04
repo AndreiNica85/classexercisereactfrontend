@@ -52,17 +52,26 @@ function TravellerForm(flight){
         e.preventDefault();
 
         const traveller = {
-            "forename" : fname,
-            "surname" : lname,
-            "email" : email,
-            "NIE" : nie,
-            "age": age,
-            "nationality": nationality
+            forename : fname,
+            surname : lname,
+            email : email,
+            NIE : nie,
+            age: age,
+            nationality: nationality
         }
 
         console.log(traveller);
 
         // POST request
+
+        const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(traveller)
+        };
+        fetch('http://localhost:8080/travellers', requestOptions)
+            .then(response => response.json())
+            .then(data => this.setState({ postId: data.id }));
 
     }
 
