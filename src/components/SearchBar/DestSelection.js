@@ -14,13 +14,6 @@ function DestSelection(data){
 
     let urlDestination = "http://localhost:8080/flights/"+ data.data +"/destinations";
 
-
-
-    
-    
-    
-    
-
     const api = async () => {
       
       let res = await fetch(urlDestination);

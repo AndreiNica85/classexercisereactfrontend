@@ -14,22 +14,22 @@ function TravellerForm(flight){
                         <h1>Traveller data.</h1>
                     </div>
                     <div className="body">
-                        <label for="fname">First name:</label>
+                        <label className="labelTraveller" for="fname">First name:</label>
                         <input className="inputA" type="text" id="fname" name="fname" ></input>
 
-                        <label for="lname">Last name:</label>
+                        <label className="labelTraveller" for="lname">Last name:</label>
                         <input type="text" id="lname" name="lname" className="inputA"></input>
 
-                        <label for="email">Email:</label>
+                        <label className="labelTraveller" for="email">Email:</label>
                         <input type="text" className="inputA" id="email" name="email"></input>
 
-                        <label for="pass">Password:</label>
+                        <label className="labelTraveller" for="pass">Password:</label>
                         <input type="password" className="inputA" id="pass" name="pass"></input>
 
-                        <label for="nation">Nationality:</label>
+                        <label className="labelTraveller" for="nation">Nationality:</label>
                         <input type="text" className="inputA" id="nation" name="nation"></input>
 
-                        <label for="age">Age:</label>
+                        <label className="labelTraveller" for="age">Age:</label>
                         <input type="number" className="inputA" id="age" name="age"></input>
 
                     </div>

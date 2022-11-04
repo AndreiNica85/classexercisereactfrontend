@@ -62,7 +62,7 @@ function SearchBar() {
 
 
   return (
-      <form>
+      <form className="formB">
         <table>
           <tr>
             <td><span>Origin:</span></td>
