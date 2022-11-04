@@ -16,7 +16,7 @@ function Home() {
             </strong>
           </h1>
           <button className="search-button"><a href="/flights">Search Flights</a></button>
-          <button className="search-button"><a href="/Info">Get Info</a></button>
+          <button className="search-button"><a href="/about">Get Info</a></button>
         </div>
         <div className="image"></div>
       </div>

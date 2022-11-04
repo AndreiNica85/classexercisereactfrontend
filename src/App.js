@@ -12,6 +12,7 @@ import Analytics from "./components/AdministrationPanel/Analytics";
 import AdministrationPanel from "./components/AdministrationPanel/AdministrationPanel";
 import NavBarAdministration from "./components/AdministrationPanel/NavBarAdministration";
 import LogIn from "./components/LogIn/LogIn";
+import About from "./components/About/About";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/analytics" element={<Analytics />} />
           <Route path="/login" element={<LogIn />} />
           <Route path="/admin" element={<AdministrationPanel />} />
+          <Route path="/about" element={<About />} />
       </Routes>
   );
 }
