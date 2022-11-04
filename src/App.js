@@ -7,6 +7,8 @@ import TravellerForm from "./components/Traveller/TravellerForm";
 import CardsContainer from "./components/FlighCard/CardsContainer";
 import Payment from "./components/Payment/Payment";
 import Done from "./components/Done/Done";
+import NewFlight from "./components/AdministrationPanel/NewFlight";
+import Analytics from "./components/AdministrationPanel/Analytics";
 
 
 function App() {
@@ -19,6 +21,9 @@ function App() {
           <Route path="/bookFlight" element={<CardsContainer />} />
           <Route path="/payment" element={<Payment />} />
           <Route path="/done" element={<Done />} />
+          <Route path="/newflight" element={<NewFlight />} />
+          <Route path="/analytics" element={<Analytics />} />
+          {/* <Route path="/login" element={<LogIn />} /> */}
       </Routes>
   );
 }

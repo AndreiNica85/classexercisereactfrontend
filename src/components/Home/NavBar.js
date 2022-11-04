@@ -7,8 +7,8 @@ function NavBar() {
       <a class="active" href="/">
         Home</a>
       <a href="/flights">Flights</a>
-      <a href="/">Contact</a>
       <a href="/">About</a>
+      <a href="/login">Log in</a>
     </div>
   );
 }

@@ -1,0 +1,42 @@
+.newFlightContainer{
+
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.newFlightForm{
+    margin-top: 5%;
+    width: 50%;
+}
+
+.newFlightForm input{
+    padding: 5px;
+    width: 100%;
+    margin-top: 10px;
+    border: 0px;
+    border-bottom: 2px solid black;
+}
+
+.newFlightForm label{
+    font-size: 25px;
+ margin-top: 10px;
+}
+
+.newFlightContainer h1 { text-align: center;}
+
+.NFround{
+    border: 3px solid black;
+    width: 30px;
+    align-self: flex-start;
+}
+
+.newFlightForm button{
+    margin-left: 35%;
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    font-size: 22px;
+    width: 200px;
+    margin-top: 20px;
+}
