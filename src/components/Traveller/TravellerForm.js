@@ -71,7 +71,9 @@ function TravellerForm(flight){
         };
         fetch('http://localhost:8080/travellers', requestOptions)
             .then(response => response.json())
-            .then(data => this.setState({ postId: data.id }));
+            .then( (data) => { console.log(data) } );
+
+        window.location.href = `/payment`;
 
     }
 

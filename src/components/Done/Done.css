@@ -1,0 +1,36 @@
+/* html body{
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    background-repeat: no-repeat;
+    background-size:contain;    
+
+} */
+body{
+
+    font-family: Arial, sans-serif;
+}
+
+.doneContainer{
+    /* border: 2px solid black; */
+    display: grid;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 5%;
+    width: 60%;
+    border-radius: 30px;
+    padding: 10px;
+
+}
+
+.doneImage{
+
+    margin: auto;
+    width: 400px;
+    min-height: 400px;
+
+}
+
+.doneContainer h1{
+    text-align: center;
+    font-size: 60px;
+}

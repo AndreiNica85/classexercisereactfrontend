@@ -6,6 +6,7 @@ import Flights from "./components/Flights/Flights";
 import TravellerForm from "./components/Traveller/TravellerForm";
 import CardsContainer from "./components/FlighCard/CardsContainer";
 import Payment from "./components/Payment/Payment";
+import Done from "./components/Done/Done";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/travellers" element={<TravellerForm />} />
           <Route path="/bookFlight" element={<CardsContainer />} />
           <Route path="/payment" element={<Payment />} />
+          <Route path="/done" element={<Done />} />
       </Routes>
   );
 }
